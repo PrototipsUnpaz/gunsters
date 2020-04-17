@@ -1,6 +1,8 @@
-# Proyecto [NOMBRE DEL PROYECTO]
+﻿# Proyecto [Gunsters]
 # Unpaz 2020
-
+# Intregantes del equipo:
+ Leonardo Maidana.
+ Miguel Costilla.
 ## Descripción
 [REEMPLAZAR CON DESCRIPCIÓN DEL PROYECTO]
 
