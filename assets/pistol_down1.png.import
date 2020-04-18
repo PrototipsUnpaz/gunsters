@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/starGold.png-896607c9bbdb6bae73a7905e36e91c08.stex"
+path="res://.import/pistol_down1.png-058fb2cb9e1fdd7a28d581004135dde6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/starGold.png"
-dest_files=[ "res://.import/starGold.png-896607c9bbdb6bae73a7905e36e91c08.stex" ]
+source_file="res://assets/pistol_down1.png"
+dest_files=[ "res://.import/pistol_down1.png-058fb2cb9e1fdd7a28d581004135dde6.stex" ]
 
 [params]
 
