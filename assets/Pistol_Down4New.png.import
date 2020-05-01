@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pistol_down4.png-7c443ce4a414729798105fc0f163145e.stex"
+path="res://.import/Pistol_Down4New.png-b928dbca5819466f62b3f79a86723426.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pistol_down4.png"
-dest_files=[ "res://.import/Pistol_down4.png-7c443ce4a414729798105fc0f163145e.stex" ]
+source_file="res://assets/Pistol_Down4New.png"
+dest_files=[ "res://.import/Pistol_Down4New.png-b928dbca5819466f62b3f79a86723426.stex" ]
 
 [params]
 
