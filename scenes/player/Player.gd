@@ -4,7 +4,6 @@ func _process(delta):
 	if get_global_mouse_position().x > 700 and get_global_mouse_position().y < 400:
 		$Pistolani.flip_h = true
 		$Pistolani.frame = 0
-	print (get_global_mouse_position())
 	if get_global_mouse_position().x <= 700 and get_global_mouse_position().y < 400:
 		$Pistolani.flip_h = false
 		$Pistolani.frame = 0

@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 63.1773, 63.9114 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ) ],
 "loop": true,
@@ -27,4 +27,4 @@ shape = SubResource( 1 )
 
 [node name="Pistolani" type="AnimatedSprite" parent="."]
 position = Vector2( 18.5452, -46.3631 )
-frames = SubResource( 4 )
+frames = SubResource( 2 )
