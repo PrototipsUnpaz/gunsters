@@ -21,5 +21,4 @@ func _process(delta):
 		$Pistolani.frame = 4
 	if  Input.is_action_pressed("Touch") and get_global_mouse_position().x > 400 and get_global_mouse_position().x < 800 and get_global_mouse_position().y < 500: 
 		$Pistolani.frame = 5
-		move_and_slide(Velocity)
 	pass

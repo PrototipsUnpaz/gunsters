@@ -12,3 +12,7 @@ func add_new_scenes(mtop,mleft):
 	add_child(mobject)
 	mobject.set_position(Vector2(mtop,mleft))
 	pass
+
+func remove_objects(mainnode,objectpath):
+	mainnode.get_node(objectpath).queue_free()
+	
