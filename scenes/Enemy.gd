@@ -1,16 +1,19 @@
-extends Node2D
+extends KinematicBody2D
+var enemyInitialPosition
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	enemyInitialPosition = true
+	interpolate_position()
+	pass
+	
+func interpolate_position():
+	$EnemyTween.interpolate_property(self, "position", self.position + Vector2(200,400), self.position + Vector2(600,400), 5, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$EnemyTween.start()
+	yield($EnemyTween,"tween_completed")
+	queue_free()
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_EnemyTween_tween_completed(object, key):
+	enemyInitialPosition = !enemyInitialPosition
+	interpolate_position()
+	pass
