@@ -3,8 +3,7 @@ extends Node2D
 var Enemy = preload("res://scenes/Enemy.tscn/")
 
 func _ready():
-	add_new_scenes(180,380)
-	add_new_scenes(900,120)
+	add_new_scenes(300,400)
 	pass
 	
 func add_new_scenes(mtop,mleft):
@@ -15,4 +14,3 @@ func add_new_scenes(mtop,mleft):
 
 func remove_objects(mainnode,objectpath):
 	mainnode.get_node(objectpath).queue_free()
-	
