@@ -4,6 +4,7 @@ var Enemy = preload("res://scenes/Enemy.tscn/")
 
 func _ready():
 	add_new_scenes(300,400)
+	add_new_scenes(300,400)
 	pass
 	
 func add_new_scenes(mtop,mleft):
