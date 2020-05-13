@@ -13,6 +13,7 @@ position = Vector2( -25.063, 72.1008 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 629.312, 618.717 )
+z_index = 2
 
 [node name="Barril" parent="." instance=ExtResource( 4 )]
 position = Vector2( 247.504, 582.121 )
