@@ -15,10 +15,10 @@ position = Vector2( -25.063, 72.1008 )
 position = Vector2( 629.312, 618.717 )
 
 [node name="Barril" parent="." instance=ExtResource( 4 )]
-position = Vector2( 259.083, 555.805 )
+position = Vector2( 247.504, 582.121 )
 
 [node name="Barril2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 290.892, 555.805 )
+position = Vector2( 305.629, 580.016 )
 
 [node name="Barril3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 270.443, 555.806 )
+position = Vector2( 275.706, 583.174 )
