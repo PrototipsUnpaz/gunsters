@@ -1,14 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/WorldTest.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Barril.tscn" type="PackedScene" id=4]
 
 [node name="WorldTest" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Fondo" parent="." instance=ExtResource( 2 )]
-position = Vector2( -3.7948, 72.1008 )
+position = Vector2( -25.063, 72.1008 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 629.312, 618.717 )
+
+[node name="Barril" parent="." instance=ExtResource( 4 )]
+position = Vector2( 259.083, 555.805 )
+
+[node name="Barril2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 290.892, 555.805 )
+
+[node name="Barril3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 270.443, 555.806 )
