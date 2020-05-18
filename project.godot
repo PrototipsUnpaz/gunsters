@@ -18,6 +18,12 @@ _global_script_class_icons={
 config/name="clase_2_senales"
 run/main_scene="res://scenes/WorldTest.tscn"
 
+[display]
+
+window/size/width=720
+window/size/height=1024
+window/size/borderless=true
+
 [input]
 
 Touch={
