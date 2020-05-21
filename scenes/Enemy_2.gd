@@ -11,5 +11,5 @@ func _on_Enemy_2_input_event(viewport, event, shape_idx):
 
 
 func _on_Timer_timeout():
-	
+	5
 	pass
