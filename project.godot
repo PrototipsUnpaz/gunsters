@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="clase_2_senales"
 run/main_scene="res://scenes/WorldTest.tscn"
 
+[autoload]
+
+Autoload="*res://scenes/Autoload/Autoload.tscn"
+
 [display]
 
 window/size/width=720

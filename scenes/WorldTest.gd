@@ -22,3 +22,4 @@ func add_new_scenes_2(mtop,mleft):
 func remove_objects(mainnode,objectpath):
 	mainnode.get_node(objectpath).queue_free()
 	
+

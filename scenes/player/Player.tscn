@@ -28,7 +28,6 @@ shape = SubResource( 1 )
 [node name="Pistolani" type="AnimatedSprite" parent="."]
 position = Vector2( 18.5452, -46.3631 )
 frames = SubResource( 2 )
-animation = "Disparo1"
 
 [node name="Balas" type="Label" parent="."]
 margin_right = 40.0
