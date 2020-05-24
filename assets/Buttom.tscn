@@ -1,13 +1,14 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/Buttom.png" type="Texture" id=1]
-[ext_resource path="res://assets/Boton.gd" type="Script" id=2]
+[ext_resource path="res://assets/Buttom.gd" type="Script" id=2]
 
 [node name="Buttom" type="TextureButton"]
-anchor_right = 0.335
-anchor_bottom = 0.229
-margin_right = -32.2
-margin_bottom = -34.496
+anchor_right = 0.139
+anchor_bottom = 0.098
+margin_right = 99.92
+margin_bottom = 99.648
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {

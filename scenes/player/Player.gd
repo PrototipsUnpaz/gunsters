@@ -3,6 +3,10 @@ var Velocity = Vector2 (0,0)
 var PosPistol = 0
 func _ready():
 	pass
+func _on_Buttom_pressed():
+	PosPistol = 0
+	Autoload.Charge = 6
+	pass 
 func _process(delta):
 	$Pistolani.frame = PosPistol
 	if Input.is_action_just_released("Touch") and Autoload.Charge >= 1:
@@ -49,5 +53,8 @@ func Get_Direction():
 		PosPistol = 4
 	print (get_global_mouse_position())
 	pass
+func equis():
+	
+		pass
 
 

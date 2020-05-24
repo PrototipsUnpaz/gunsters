@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/WorldTest.gd" type="Script" id=3]
 [ext_resource path="res://scenes/Barril.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Balas.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/Boton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Buttom.tscn" type="PackedScene" id=6]
 
 [node name="WorldTest" type="Node2D"]
 script = ExtResource( 3 )
@@ -30,7 +30,8 @@ position = Vector2( 213.548, 739.062 )
 position = Vector2( 121.134, 204.995 )
 
 [node name="Buttom" parent="." instance=ExtResource( 6 )]
-margin_left = 511.296
-margin_top = 655.097
-margin_right = 711.296
-margin_bottom = 855.097
+margin_left = 583.197
+margin_top = 687.053
+margin_right = 783.197
+margin_bottom = 887.053
+[connection signal="pressed" from="Buttom" to="Player" method="_on_Buttom_pressed"]
