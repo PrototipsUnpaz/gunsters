@@ -17,7 +17,28 @@ _global_script_class_icons={
 
 config/name="clase_2_senales"
 run/main_scene="res://scenes/WorldTest.tscn"
-config/icon="res://assets/icon.png"
+
+[autoload]
+
+Autoload="*res://scenes/Autoload/Autoload.tscn"
+
+[display]
+
+window/size/width=720
+window/size/height=1024
+window/size/borderless=true
+
+[input]
+
+Touch={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

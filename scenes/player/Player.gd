@@ -1,19 +1,55 @@
 extends KinematicBody2D
-
-const SPEED = 300
-var velocity = Vector2()
-
-func _physics_process(delta):
-	if Input.is_action_just_released("ui_down") or Input.is_action_just_released("ui_up") or Input.is_action_just_released("ui_left") or Input.is_action_just_released("ui_right"):
-		velocity.x = 0
-		velocity.y = 0
-	if Input.is_action_pressed("ui_left"):
-		velocity.x = -SPEED
-	if Input.is_action_pressed("ui_right"):
-		velocity.x = SPEED
-	if Input.is_action_pressed("ui_up"):
-		velocity.y = -SPEED
-	if Input.is_action_pressed("ui_down"):
-		velocity.y = SPEED
-	move_and_slide(velocity)
+var Velocity = Vector2 (0,0)
+var posPistol = 0
+func _ready():
 	pass
+func _process(delta):
+	$Pistolani.frame = posPistol
+	if Input.is_action_just_released("Touch") and Autoload.Charge >= 1:
+		Get_Direction()
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
+		if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
+			posPistol = 1
+			Autoload.Charge -= 1
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
+		if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
+			$Pistolani.flip_h = false
+			posPistol = 1
+			Autoload.Charge -= 1
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
+		if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
+			$Pistolani.flip_h = false
+			posPistol = 3
+			Autoload.Charge -= 1
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
+		if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
+			$Pistolani.flip_h = true
+			posPistol = 3
+			Autoload.Charge -= 1
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
+		if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
+			posPistol = 5
+			Autoload.Charge -= 1
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge <= 0:
+		posPistol = 0
+	pass
+	
+func Get_Direction():
+	if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
+		$Pistolani.flip_h = true
+		posPistol = 0
+	if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
+		$Pistolani.flip_h = false
+		posPistol = 0
+	if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
+		$Pistolani.flip_h = false
+		posPistol = 2
+	if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
+		$Pistolani.flip_h = true
+		posPistol = 2
+	if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
+		posPistol = 4
+	print (get_global_mouse_position())
+	pass
+
+
