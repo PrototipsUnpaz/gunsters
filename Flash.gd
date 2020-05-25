@@ -3,5 +3,5 @@ extends Sprite
 func _ready():
 	pass
 func mostrar_flash():
-	AnimationPlayer.start
+	$flash.play("Flash")
 	pass

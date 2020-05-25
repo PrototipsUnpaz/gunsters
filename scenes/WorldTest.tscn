@@ -40,4 +40,5 @@ margin_right = 783.197
 margin_bottom = 887.053
 
 [node name="Flash" parent="." instance=ExtResource( 7 )]
+visible = true
 [connection signal="pressed" from="Buttom" to="Player" method="_on_Buttom_pressed"]
