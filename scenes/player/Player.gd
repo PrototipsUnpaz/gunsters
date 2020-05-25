@@ -20,20 +20,24 @@ func _process(delta):
 			$Pistolani.flip_h = false
 			PosPistol = 1
 			Autoload.Charge -= 1
+		
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
 		if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
 			$Pistolani.flip_h = false
 			PosPistol = 3
 			Autoload.Charge -= 1
+		
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
 		if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
 			$Pistolani.flip_h = true
 			PosPistol = 3
+			
 			Autoload.Charge -= 1
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
 		if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
 			PosPistol = 5
 			Autoload.Charge -= 1
+			
 	pass
 	
 func Get_Direction():
@@ -53,8 +57,8 @@ func Get_Direction():
 		PosPistol = 4
 	print (get_global_mouse_position())
 	pass
-func equis():
-	
-		pass
 
 
+func ausilioh_():
+	if Input.is_action_just_pressed("Touch"):
+		get_tree().call_group("flash", "mostrar_flash")
