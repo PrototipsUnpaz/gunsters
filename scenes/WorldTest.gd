@@ -23,3 +23,6 @@ func remove_objects(mainnode,objectpath):
 	mainnode.get_node(objectpath).queue_free()
 	
 
+	
+	
+
