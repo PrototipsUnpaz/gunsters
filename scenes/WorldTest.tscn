@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Balas.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Buttom.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Flash.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/FlashEnemy.tscn" type="PackedScene" id=8]
 
 [node name="WorldTest" type="Node2D"]
 script = ExtResource( 3 )
@@ -14,11 +15,9 @@ script = ExtResource( 3 )
 [node name="Bg" parent="." instance=ExtResource( 2 )]
 position = Vector2( -292.982, 247.265 )
 
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 391.533, 858.268 )
 z_index = 2
-
 
 [node name="Barrel" parent="." instance=ExtResource( 4 )]
 position = Vector2( 179.008, 733.532 )
@@ -28,7 +27,6 @@ position = Vector2( 247.948, 731.427 )
 
 [node name="Barrel3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 213.548, 739.062 )
-
 
 [node name="Bullets" parent="." instance=ExtResource( 5 )]
 position = Vector2( 121.134, 204.995 )
@@ -42,4 +40,6 @@ margin_bottom = 887.053
 [node name="Flash" parent="." instance=ExtResource( 7 )]
 visible = true
 z_index = 6
+
+[node name="FlashEnemy" parent="." instance=ExtResource( 8 )]
 [connection signal="pressed" from="Buttom" to="Player" method="_on_Buttom_pressed"]
