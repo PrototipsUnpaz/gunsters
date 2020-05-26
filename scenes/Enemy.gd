@@ -19,6 +19,4 @@ func _on_EnemyTween_tween_completed(object, key):
 	pass
 
 
-func _on_Timer_timeout():
-	get_tree().call_group("Flash_enemy", "mostrar_Flash")
-	pass
+
