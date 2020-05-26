@@ -4,7 +4,7 @@ var posPistol = 0
 func _ready():
 	pass
 func _on_Buttom_pressed():
-	PosPistol = 0
+	posPistol = 0
 	Autoload.Charge = 6
 	
 	pass 

@@ -17,3 +17,8 @@ func _on_EnemyTween_tween_completed(object, key):
 	enemyInitialPosition = !enemyInitialPosition
 	interpolate_position()
 	pass
+
+
+func _on_Timer_timeout():
+	get_tree().call_group("Flash_enemy", "mostrar_Flash")
+	pass
