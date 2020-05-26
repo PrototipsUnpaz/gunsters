@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Balas.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Buttom.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Flash.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Shot.png" type="Texture" id=8]
 
 [node name="WorldTest" type="Node2D"]
 script = ExtResource( 3 )
@@ -41,4 +42,6 @@ margin_bottom = 887.053
 
 [node name="Flash" parent="." instance=ExtResource( 7 )]
 visible = true
+z_index = 6
+texture = ExtResource( 8 )
 [connection signal="pressed" from="Buttom" to="Player" method="_on_Buttom_pressed"]
