@@ -13,7 +13,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, false ]
@@ -25,7 +25,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
@@ -34,8 +34,7 @@ tracks/1/keys = {
 [node name="FlashEnemy" type="Sprite" groups=[
 "Flash_enemy",
 ]]
-visible = false
-modulate = Color( 1, 0, 0, 0 )
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 387.655, 519.146 )
 scale = Vector2( 49.3108, 51.2588 )
 texture = ExtResource( 2 )
