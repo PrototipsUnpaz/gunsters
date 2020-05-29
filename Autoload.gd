@@ -1,5 +1,5 @@
 extends Node
-
+var prueba = false 
 
 const CountCharge = 6
 var Charge = CountCharge
