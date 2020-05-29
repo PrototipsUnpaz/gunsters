@@ -1,6 +1,7 @@
 extends KinematicBody2D
 var Velocity = Vector2 (0,0)
 var posPistol = 0
+
 func _ready():
 	pass
 func _on_Buttom_pressed():
@@ -43,9 +44,6 @@ func _process(delta):
 			posPistol = 5
 			Autoload.Charge -= 1
 			get_tree().call_group("Flash", "mostrar_flash")
-
-
-
 	pass
 	
 func Get_Direction():

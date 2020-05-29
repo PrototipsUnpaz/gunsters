@@ -1,9 +1,8 @@
 extends KinematicBody2D
 
 func _ready():
-	pass
+	pass	
 
-func _process(delta):
-	Autoload.Lives = 1
-	$Anilivescol.frame = 1
-	pass
+func _on_FlashEnemy_lifesteel():
+	$Anilives.frame -= 1
+	pass 
