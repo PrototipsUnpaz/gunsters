@@ -10,8 +10,6 @@ func _ready():
 func _process(delta): 
 	if Autoload.prueba == false:
 		_shooting()
-
-	print(Autoload.Charge)
 	pass
 	
 func _shooting():
