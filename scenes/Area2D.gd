@@ -12,5 +12,4 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 func _on_Timer_timeout():
 	get_tree().call_group("Flash_enemy", "mostrar_Flash")
 	Autoload.Lives -= 1
-	print(Autoload.Lives)
 	pass
