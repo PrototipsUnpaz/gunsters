@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=2]
@@ -11,6 +11,24 @@
 [ext_resource path="res://scenes/Lives.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/Enemy_2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Respawn_2.gd" type="Script" id=11]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Movspawn"
+length = 3.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.8, 1, 1.5, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 91.0995, 510.808 ), Vector2( 234.941, 507.383 ), Vector2( 464.402, 524.507 ), Vector2( 464.402, 524.507 ), Vector2( 464.402, 524.507 ), Vector2( 591.12, 524.507 ), Vector2( 471.252, 685.473 ), Vector2( 471.252, 685.473 ) ]
+}
 
 [node name="WorldTest" type="Node2D" groups=[
 "WorldTest",
@@ -53,13 +71,17 @@ scale = Vector2( 0.5, 0.5 )
 wait_time = 50.0
 
 [node name="Respawn_2" type="Position2D" parent="."]
-position = Vector2( 91.0995, 510.808 )
+position = Vector2( 589.342, 526.895 )
 script = ExtResource( 11 )
 ene = ExtResource( 10 )
 
 [node name="Respawn" type="Timer" parent="Respawn_2"]
-wait_time = 3.0
+wait_time = 5.0
 autostart = true
+
+[node name="Movspawn" type="AnimationPlayer" parent="Respawn_2"]
+autoplay = "Movspawn"
+anims/Movspawn = SubResource( 1 )
 [connection signal="lifesteel" from="FlashEnemy" to="Lives" method="_on_FlashEnemy_lifesteel"]
 [connection signal="ready" from="Lives" to="FlashEnemy" method="_on_Lives_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
