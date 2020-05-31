@@ -28,6 +28,11 @@ shape = SubResource( 1 )
 wait_time = 4.0
 one_shot = true
 autostart = true
+
+[node name="DeleteThis" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
 [connection signal="tween_completed" from="EnemyTween" to="." method="_on_EnemyTween_tween_completed"]
 [connection signal="timeout" from="Timer" to="Area2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="DeleteThis" to="." method="_on_DeleteThis_timeout"]

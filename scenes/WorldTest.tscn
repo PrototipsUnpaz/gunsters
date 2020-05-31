@@ -91,12 +91,12 @@ scale = Vector2( 0.5, 0.5 )
 wait_time = 50.0
 
 [node name="Respawn_2" type="Position2D" parent="."]
-position = Vector2( 455.522, 392.069 )
+position = Vector2( 198.17, 638.125 )
 script = ExtResource( 11 )
 ene = ExtResource( 13 )
 
 [node name="Respawn" type="Timer" parent="Respawn_2"]
-wait_time = 5.0
+wait_time = 3.0
 autostart = true
 
 [node name="Movspawn" type="AnimationPlayer" parent="Respawn_2"]
@@ -104,12 +104,12 @@ autoplay = "Movspawn"
 anims/Movspawn = SubResource( 1 )
 
 [node name="Respawn_3" type="Position2D" parent="."]
-position = Vector2( 491.008, 659.223 )
+position = Vector2( 421.767, 740.869 )
 script = ExtResource( 10 )
 ene2 = ExtResource( 12 )
 
 [node name="Respawn2" type="Timer" parent="Respawn_3"]
-wait_time = 6.0
+wait_time = 5.0
 autostart = true
 
 [node name="Movspawn2" type="AnimationPlayer" parent="Respawn_3"]
