@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://scenes/Respawn_2.gd" type="Script" id=11]
 [ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/Enemy_2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/S.png" type="Texture" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Movspawn"
@@ -81,7 +82,7 @@ position = Vector2( 600, 800 )
 z_index = 6
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 370.053, 412.606 )
+position = Vector2( 344.947, 423.764 )
 
 [node name="Lives" parent="." instance=ExtResource( 9 )]
 position = Vector2( 535.064, 193.534 )
@@ -115,8 +116,15 @@ autostart = true
 [node name="Movspawn2" type="AnimationPlayer" parent="Respawn_3"]
 autoplay = "Movspawn"
 anims/Movspawn = SubResource( 2 )
+
+[node name="Win" type="Sprite" parent="."]
+visible = false
+position = Vector2( 358.233, 505.049 )
+texture = ExtResource( 14 )
 [connection signal="lifesteel" from="FlashEnemy" to="Lives" method="_on_FlashEnemy_lifesteel"]
 [connection signal="ready" from="Lives" to="FlashEnemy" method="_on_Lives_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="Respawn_2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="Respawn_3" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Respawn_2/Respawn" to="Respawn_2" method="_on_Respawn_timeout"]
 [connection signal="timeout" from="Respawn_3/Respawn2" to="Respawn_3" method="_on_Respawn2_timeout"]
