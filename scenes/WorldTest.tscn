@@ -82,7 +82,7 @@ position = Vector2( 600, 800 )
 z_index = 6
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 344.947, 423.764 )
+position = Vector2( 365.501, 473.682 )
 
 [node name="Lives" parent="." instance=ExtResource( 9 )]
 position = Vector2( 535.064, 193.534 )
