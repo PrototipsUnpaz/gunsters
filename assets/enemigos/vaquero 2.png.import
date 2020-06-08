@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bala3.png-bcce2267c86f846502650b0edb60d9d2.stex"
+path="res://.import/vaquero 2.png-cee809795ddbe5f687600b6f6371b89e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bala3.png"
-dest_files=[ "res://.import/Bala3.png-bcce2267c86f846502650b0edb60d9d2.stex" ]
+source_file="res://assets/enemigos/vaquero 2.png"
+dest_files=[ "res://.import/vaquero 2.png-cee809795ddbe5f687600b6f6371b89e.stex" ]
 
 [params]
 

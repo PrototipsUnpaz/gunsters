@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pistol_Down4New.png-b928dbca5819466f62b3f79a86723426.stex"
+path="res://.import/vaquero.png-9a95f3f5855bd573c056c014c634ebe9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pistol_Down4New.png"
-dest_files=[ "res://.import/Pistol_Down4New.png-b928dbca5819466f62b3f79a86723426.stex" ]
+source_file="res://assets/enemigos/vaquero.png"
+dest_files=[ "res://.import/vaquero.png-9a95f3f5855bd573c056c014c634ebe9.stex" ]
 
 [params]
 
