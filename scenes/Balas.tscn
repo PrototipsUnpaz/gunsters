@@ -20,6 +20,7 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=2]
 
 [node name="Balas" type="KinematicBody2D"]
+scale = Vector2( 1.3, 1.3 )
 script = ExtResource( 7 )
 
 [node name="Bullets" type="AnimatedSprite" parent="."]

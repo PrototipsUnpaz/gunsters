@@ -60,7 +60,7 @@ script = ExtResource( 3 )
 position = Vector2( -5.43624, 2.56273 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 391.533, 858.268 )
+position = Vector2( 384.884, 1277.22 )
 z_index = 2
 
 [node name="Barrel" parent="." instance=ExtResource( 4 )]
@@ -73,19 +73,22 @@ position = Vector2( 247.948, 731.427 )
 position = Vector2( 213.548, 739.062 )
 
 [node name="Bullets" parent="." instance=ExtResource( 5 )]
-position = Vector2( 121.134, 204.995 )
+position = Vector2( 132.174, 1314.38 )
 
 [node name="Buttom" parent="." instance=ExtResource( 6 )]
-position = Vector2( 600, 800 )
+position = Vector2( 658.432, 1108.28 )
 
 [node name="Flash" parent="." instance=ExtResource( 7 )]
+position = Vector2( -376.668, 650.496 )
+scale = Vector2( 1.09015, 1.33771 )
 z_index = 6
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 365.501, 473.682 )
+position = Vector2( -719.804, 625.473 )
+scale = Vector2( 49.3108, 55.509 )
 
 [node name="Lives" parent="." instance=ExtResource( 9 )]
-position = Vector2( 535.064, 193.534 )
+position = Vector2( 653.996, 1319.28 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Timer" type="Timer" parent="."]
