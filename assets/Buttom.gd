@@ -4,7 +4,7 @@ func _ready():
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	Autoload.prueba = true
-	$Timer.start()
+	$TimerRechar.start()
 	pass 
 
 

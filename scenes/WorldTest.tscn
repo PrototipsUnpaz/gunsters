@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=2]
@@ -9,8 +9,51 @@
 [ext_resource path="res://assets/Flash.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/FlashEnemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Lives.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Respawn_3.gd" type="Script" id=10]
+[ext_resource path="res://scenes/Respawn_2.gd" type="Script" id=11]
+[ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Enemy_2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/S.png" type="Texture" id=14]
 
-[node name="WorldTest" type="Node2D"]
+[sub_resource type="Animation" id=1]
+resource_name = "Movspawn"
+length = 4.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 198.17, 638.125 ), Vector2( 639.969, 627.851 ), Vector2( 556.062, 297.358 ), Vector2( 202.451, 638.982 ), Vector2( 554.349, 295.645 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Movspawn"
+length = 3.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 516.676, 627.851 ), Vector2( 30.355, 740.869 ), Vector2( 424.207, 740.869 ) ]
+}
+
+[node name="WorldTest" type="Node2D" groups=[
+"WorldTest",
+]]
 script = ExtResource( 3 )
 
 [node name="Bg" parent="." instance=ExtResource( 2 )]
@@ -39,10 +82,49 @@ position = Vector2( 600, 800 )
 z_index = 6
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 370.053, 412.606 )
+position = Vector2( 365.501, 473.682 )
 
 [node name="Lives" parent="." instance=ExtResource( 9 )]
 position = Vector2( 535.064, 193.534 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 50.0
+
+[node name="Respawn_2" type="Position2D" parent="."]
+position = Vector2( 198.17, 638.125 )
+script = ExtResource( 11 )
+ene = ExtResource( 13 )
+
+[node name="Respawn" type="Timer" parent="Respawn_2"]
+wait_time = 3.0
+autostart = true
+
+[node name="Movspawn" type="AnimationPlayer" parent="Respawn_2"]
+autoplay = "Movspawn"
+anims/Movspawn = SubResource( 1 )
+
+[node name="Respawn_3" type="Position2D" parent="."]
+position = Vector2( 421.767, 740.869 )
+script = ExtResource( 10 )
+ene2 = ExtResource( 12 )
+
+[node name="Respawn2" type="Timer" parent="Respawn_3"]
+wait_time = 5.0
+autostart = true
+
+[node name="Movspawn2" type="AnimationPlayer" parent="Respawn_3"]
+autoplay = "Movspawn"
+anims/Movspawn = SubResource( 2 )
+
+[node name="Win" type="Sprite" parent="."]
+visible = false
+position = Vector2( 358.233, 505.049 )
+texture = ExtResource( 14 )
 [connection signal="lifesteel" from="FlashEnemy" to="Lives" method="_on_FlashEnemy_lifesteel"]
 [connection signal="ready" from="Lives" to="FlashEnemy" method="_on_Lives_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="Respawn_2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="Respawn_3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Respawn_2/Respawn" to="Respawn_2" method="_on_Respawn_timeout"]
+[connection signal="timeout" from="Respawn_3/Respawn2" to="Respawn_3" method="_on_Respawn2_timeout"]
