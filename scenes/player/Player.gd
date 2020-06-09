@@ -61,7 +61,6 @@ func Get_Direction():
 	if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
 		posPistol = 4
 	print (get_global_mouse_position())
-
 	pass
 
 

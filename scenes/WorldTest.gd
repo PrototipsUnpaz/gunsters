@@ -7,6 +7,11 @@ func _ready():
 	add_new_scenes(300,400)
 	add_new_scenes_2(300,500)
 	pass
+func _process(delta):
+	if Autoload.Lives <= 0:
+		get_tree().change_scene("res://scenes/continuar/Gameover.tscn")
+		pass
+		
 
 func add_new_scenes(mtop,mleft):
 	var mobject = Enemy.instance()
@@ -28,11 +33,7 @@ func _on_Timer_timeout():
 	$Win.visible = true
 	pass 
 	
-func _process(delta):
-	if Autoload.dead == true: 
-		get_tree().change_scene("res://scenes/continuar/Gameover.tscn")
-		Autoload.dead = false
-		pass
+
 	
 
 
