@@ -154,7 +154,7 @@ volume_db = -15.0
 "sfx",
 ]]
 stream = SubResource( 5 )
-volume_db = -25.0
+volume_db = -25.011
 
 [node name="disparo" type="AudioStreamPlayer" parent="Node" groups=[
 "sfx",
