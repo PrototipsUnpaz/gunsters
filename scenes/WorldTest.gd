@@ -4,8 +4,8 @@ var Enemy_2 = preload ("res://scenes/Enemy_2.tscn/")
 func _ready():
 	$Timer.start()
 	$Win.visible = false
-	add_new_scenes(300,400)
-	add_new_scenes_2(300,500)
+	add_new_scenes(300,800)
+	add_new_scenes_2(300,300)
 	pass
 func _process(delta):
 	if Autoload.Lives <= 0:
