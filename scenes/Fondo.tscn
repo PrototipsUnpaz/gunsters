@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/BGG.png" type="Texture" id=1]
+[ext_resource path="res://assets/fondo/fondoin.png" type="Texture" id=1]
 
 [node name="Fondo" type="Node2D"]
 
 [node name="BG" type="Sprite" parent="."]
-position = Vector2( 401.007, 536.069 )
-scale = Vector2( 1.18696, 0.984623 )
+position = Vector2( 384.087, 681.741 )
+scale = Vector2( 1.00746, 1.00746 )
 texture = ExtResource( 1 )

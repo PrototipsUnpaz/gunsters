@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Dano al jugador.ogg-a347524819b9f5c494b89d717e8d42a1.oggstr"
+
+[deps]
+
+source_file="res://scenes/sonidos/Dano al jugador.ogg"
+dest_files=[ "res://.import/Dano al jugador.ogg-a347524819b9f5c494b89d717e8d42a1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

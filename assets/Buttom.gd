@@ -3,8 +3,10 @@ func _ready():
 	pass
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
+	get_tree().get_nodes_in_group("sfx")[0].get_node("recarga").play()
 	Autoload.prueba = true
 	$TimerRechar.start()
+	
 	pass 
 
 
