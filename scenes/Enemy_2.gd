@@ -10,4 +10,5 @@ func _on_Timer_timeout():
 	get_tree().call_group("Flash_enemy", "mostrar_Flash")
 	queue_free()
 	Autoload.Lives -= 1
+	
 	pass

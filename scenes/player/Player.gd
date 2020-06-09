@@ -8,7 +8,7 @@ func _ready():
 	pass
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Touch"):
-		get_tree().get_nodes_in_group("sfx")[0].get_node("1").play()
+		pass
 func _process(delta): 
 	if Autoload.prueba == false:
 		_shooting()
@@ -49,7 +49,6 @@ func _shooting():
 			posPistol = 5
 			Autoload.Charge -= 1
 			get_tree().call_group("Flash", "mostrar_flash")
-		
 			pass
 func Get_Direction():
 	if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
