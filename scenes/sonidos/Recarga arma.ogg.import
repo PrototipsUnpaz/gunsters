@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Recarga arma.ogg-5d5d341072ed200a9a1eeeec549181dc.oggstr"
+
+[deps]
+
+source_file="res://scenes/sonidos/Recarga arma.ogg"
+dest_files=[ "res://.import/Recarga arma.ogg-5d5d341072ed200a9a1eeeec549181dc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
