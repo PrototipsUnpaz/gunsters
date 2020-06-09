@@ -24,10 +24,18 @@ func remove_objects(mainnode,objectpath):
 	mainnode.get_node(objectpath).queue_free()
 	
 
-
 func _on_Timer_timeout():
 	$Win.visible = true
 	pass 
+	
+func _process(delta):
+	if Autoload.dead == true: 
+		get_tree().change_scene("res://scenes/continuar/Gameover.tscn")
+		Autoload.dead = false
+		pass
+	
+
+
 
 
 

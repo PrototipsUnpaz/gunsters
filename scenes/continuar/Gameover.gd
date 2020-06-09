@@ -4,7 +4,7 @@ extends Control
 
 
 func _on_quit_pressed():
-	get_tree().quit()
+	get_tree().change_scene("res://scenes/menu/botones.tscn")
 	pass # Replace with function body.
 
 
