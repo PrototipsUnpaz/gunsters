@@ -6,9 +6,6 @@ var posPistol = 0
 func _ready():
 	
 	pass
-func _physics_process(delta):
-	if Input.is_action_just_pressed("Touch"):
-		pass
 func _process(delta): 
 	if Autoload.prueba == false:
 		_shooting()
