@@ -1,12 +1,16 @@
 extends KinematicBody2D
 var Velocity = Vector2 (0,0)
 var posPistol = 0
-
+var Scope = preload ("res://assets/Scope.tscn")
 
 func _ready():
 	
 	pass
 func _process(delta): 
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1 and Autoload.prueba == false:
+		var Sc = Scope.instance()
+		add_child(Sc)
+		Sc.global_position = get_global_mouse_position()
 	if Autoload.prueba == false:
 		_shooting()
 			
@@ -62,7 +66,6 @@ func Get_Direction():
 		posPistol = 2
 	if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
 		posPistol = 4
-	print (get_global_mouse_position())
 	
 	pass
 

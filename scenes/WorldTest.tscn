@@ -95,7 +95,7 @@ scale = Vector2( 1.09015, 1.33771 )
 z_index = 6
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 363.425, 688.069 )
+position = Vector2( 361.266, 688.069 )
 scale = Vector2( 49.3108, 55.509 )
 
 [node name="Lives" parent="." instance=ExtResource( 9 )]

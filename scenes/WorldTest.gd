@@ -8,6 +8,7 @@ func _ready():
 	add_new_scenes_2(300,300)
 	pass
 func _process(delta):
+	
 	if Autoload.Lives <= 0:
 		get_tree().change_scene("res://scenes/continuar/Gameover.tscn")
 		pass
