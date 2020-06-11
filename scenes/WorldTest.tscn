@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://scenes/Respawn_2.gd" type="Script" id=11]
 [ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/Enemy_2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/S.png" type="Texture" id=14]
 [ext_resource path="res://scenes/sonidos/Music_in_game.ogg" type="AudioStream" id=15]
 [ext_resource path="res://assets/cosa.png" type="Texture" id=16]
 
@@ -132,11 +131,6 @@ autostart = true
 [node name="Movspawn2" type="AnimationPlayer" parent="Respawn_3"]
 autoplay = "Movspawn"
 anims/Movspawn = SubResource( 2 )
-
-[node name="Win" type="Sprite" parent="."]
-visible = false
-position = Vector2( 358.233, 505.049 )
-texture = ExtResource( 14 )
 
 [node name="Mig" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )

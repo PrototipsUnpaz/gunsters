@@ -3,7 +3,6 @@ var Enemy = preload("res://scenes/Enemy.tscn/")
 var Enemy_2 = preload ("res://scenes/Enemy_2.tscn/")
 func _ready():
 	$Timer.start()
-	$Win.visible = false
 	add_new_scenes(300,800)
 	add_new_scenes_2(300,300)
 	pass
@@ -31,7 +30,7 @@ func remove_objects(mainnode,objectpath):
 	
 
 func _on_Timer_timeout():
-	$Win.visible = true
+	get_tree().change_scene("res://scenes/Succesfull.tscn")
 	pass 
 	
 
