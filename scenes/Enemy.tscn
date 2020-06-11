@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/enemigos/vaquero 2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Area2D.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Enemy.gd" type="Script" id=3]
-[ext_resource path="res://scenes/Sprite.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.0302, 79.7158 )
@@ -37,10 +36,9 @@ shape = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
-modulate = Color( 0.982231, 0.896349, 0.896349, 1 )
+modulate = Color( 0.994176, 0.966024, 0.966024, 1 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 1 )
-script = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D/Sprite"]
 autoplay = "Disparo"
