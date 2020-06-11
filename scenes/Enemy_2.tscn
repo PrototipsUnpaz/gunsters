@@ -14,10 +14,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 3.2, 3.4, 3.6, 3.7, 3.8, 3.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 2.5, 3, 3.3, 3.5, 3.6, 3.7, 3.8, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.858824, 0.176471, 0.176471, 1 ), Color( 1, 1, 1, 1 ), Color( 0.858824, 0.176471, 0.176471, 1 ), Color( 1, 1, 1, 1 ), Color( 0.858824, 0.176471, 0.176471, 1 ), Color( 1, 1, 1, 1 ), Color( 0.858824, 0.176471, 0.176471, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.858824, 0.176471, 0.176471, 1 ), Color( 1, 1, 1, 1 ), Color( 0.858824, 0.176471, 0.176471, 1 ), Color( 1, 1, 1, 1 ), Color( 0.858824, 0.176471, 0.176471, 1 ), Color( 1, 1, 1, 1 ), Color( 0.858824, 0.176471, 0.176471, 1 ) ]
 }
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -28,7 +28,6 @@ height = 30.4985
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.955922, 0.742877, 0.742877, 1 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 1 )
 
