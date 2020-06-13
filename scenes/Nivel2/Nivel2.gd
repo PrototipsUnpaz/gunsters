@@ -2,7 +2,8 @@ extends Node2D
 var Enemy = preload("res://scenes/Enemy.tscn/")
 var Enemy_2 = preload ("res://scenes/Enemy_2.tscn/")
 func _ready():
-	$Timer.start()
+	Autoload.Nivel2 = true
+	$Cdlvl.start()
 	add_new_scenes(300,800)
 	add_new_scenes_2(300,300)
 	pass
@@ -29,14 +30,7 @@ func remove_objects(mainnode,objectpath):
 	mainnode.get_node(objectpath).queue_free()
 	
 
-func _on_Timer_timeout():
-	get_tree().change_scene("res://scenes/Nivel2/Nivel2.tscn")
+
+func _on_Cdlvl_timeout():
+	get_tree().change_scene("res://scenes/Succesfull.tscn")
 	pass 
-	
-
-	
-
-
-
-
-
