@@ -32,5 +32,5 @@ func remove_objects(mainnode,objectpath):
 
 
 func _on_Cdlvl_timeout():
-	get_tree().change_scene("res://scenes/Succesfull.tscn")
+	get_tree().change_scene("res://scenes/level2/Level_2_Complete.tscn")
 	pass 

@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/level2/Level_2_Complete.gd" type="Script" id=1]
+
+[node name="Level_2_Complete" type="Node2D"]
+scale = Vector2( 5, 5 )
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 19.5625
+margin_top = 117.375
+margin_right = 130.562
+margin_bottom = 131.375
+text = "Level 2 complete"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cd2" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+[connection signal="timeout" from="cd2" to="." method="_on_cd2_timeout"]

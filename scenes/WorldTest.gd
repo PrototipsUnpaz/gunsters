@@ -30,7 +30,7 @@ func remove_objects(mainnode,objectpath):
 	
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://scenes/Nivel2/Nivel2.tscn")
+	get_tree().change_scene("res://scenes/Level1Complete/Level_1_Complete.tscn")
 	pass 
 	
 
