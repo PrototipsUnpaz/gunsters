@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/Lives.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Flash.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Buttom.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/sonidos/Music_in_game.ogg" type="AudioStream" id=10]
+[ext_resource path="res://scenes/sonidos/Kevin_breaktime.ogg" type="AudioStream" id=10]
 [ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/Nivel2/Respawn.gd" type="Script" id=12]
 [ext_resource path="res://scenes/Enemy_2.tscn" type="PackedScene" id=13]
@@ -97,7 +97,7 @@ position = Vector2( 648.694, 1313.31 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Cdlvl" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 15.0
 
 [node name="Respawn" type="Position2D" parent="."]
 position = Vector2( 599.243, 522.112 )
@@ -127,7 +127,6 @@ autostart = true
 
 [node name="mig" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
-volume_db = -5.0
 autoplay = true
 
 [node name="Node" type="Node" parent="." groups=[
