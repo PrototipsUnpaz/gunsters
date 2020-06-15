@@ -17,4 +17,5 @@ __meta__ = {
 }
 
 [node name="Cdalvl3" type="Timer" parent="."]
+autostart = true
 [connection signal="timeout" from="Cdalvl3" to="." method="_on_Cdalvl3_timeout"]
