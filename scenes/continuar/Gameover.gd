@@ -10,7 +10,7 @@ func _on_continue_pressed():
 	get_tree().get_nodes_in_group("sf")[0].get_node("Confirm4").play()
 	pass
 func _lvl3():
-	get_tree().change_scene("res://scenes/Level 3/Level 3.tscn")
+	get_tree().change_scene("res://scenes/Level_3/Level_3.tscn")
 	pass
 func _lvl2():
 	get_tree().change_scene("res://scenes/Nivel2/Nivel2.tscn")

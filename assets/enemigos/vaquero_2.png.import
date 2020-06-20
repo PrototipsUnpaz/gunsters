@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Lvl3.png-bedb203c068bf6581f8c07615ad8da06.stex"
+path="res://.import/vaquero_2.png-aff0bac9e2e1e4a35167a828f51f8981.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Level 3/Lvl3.png"
-dest_files=[ "res://.import/Lvl3.png-bedb203c068bf6581f8c07615ad8da06.stex" ]
+source_file="res://assets/enemigos/vaquero_2.png"
+dest_files=[ "res://.import/vaquero_2.png-aff0bac9e2e1e4a35167a828f51f8981.stex" ]
 
 [params]
 
