@@ -35,5 +35,5 @@ func remove_objects(mainnode,objectpath):
 
 
 func _on_CdlvlF_timeout():
-	get_tree().change_scene("")
+	get_tree().change_scene("res://scenes/Succesfull.tscn")
 	pass # Replace with function body.
