@@ -1,10 +1,10 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Nivel2/Nivel2.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Balas.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Barril.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Nivel2/BG2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Nivel2/escaleras.png" type="Texture" id=5]
 [ext_resource path="res://scenes/FlashEnemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Lives.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Flash.tscn" type="PackedScene" id=8]
@@ -14,7 +14,8 @@
 [ext_resource path="res://scenes/Nivel2/Respawn.gd" type="Script" id=12]
 [ext_resource path="res://scenes/Enemy_2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/Nivel2/Respawn2.gd" type="Script" id=14]
-[ext_resource path="res://assets/cosa.png" type="Texture" id=15]
+[ext_resource path="res://scenes/Nivel2/Table.png" type="Texture" id=15]
+[ext_resource path="res://scenes/Nivel2/pianolag.png" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Respawn"
@@ -30,7 +31,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1, 2, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 75.3168, 931.697 ), Vector2( 368.216, 892.644 ), Vector2( 652.746, 880.556 ), Vector2( 553.718, 217.117 ), Vector2( 78.1063, 942.855 ) ]
+"values": [ Vector2( 162.768, 950.247 ), Vector2( 108.046, 345.571 ), Vector2( 413.985, 348.291 ), Vector2( 670.711, 349.493 ), Vector2( 67.5061, 990.556 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -47,7 +48,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 1, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 26.5929, 1117.14 ), Vector2( 408.73, 769.935 ), Vector2( 384.281, 1046.28 ) ]
+"values": [ Vector2( 234.667, 846.883 ), Vector2( 473.305, 956.484 ), Vector2( 82.9323, 1110.85 ) ]
 }
 
 [sub_resource type="AudioStreamOGGVorbis" id=3]
@@ -64,7 +65,7 @@ data = PoolByteArray( 79, 103, 103, 83, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 139, 57, 6
 ]]
 script = ExtResource( 2 )
 
-[node name="Bg" parent="." instance=ExtResource( 4 )]
+[node name="BG2" parent="." instance=ExtResource( 4 )]
 
 [node name="Pistol" parent="." instance=ExtResource( 1 )]
 position = Vector2( 378.687, 1278.85 )
@@ -72,35 +73,39 @@ position = Vector2( 378.687, 1278.85 )
 [node name="Balas" parent="." instance=ExtResource( 3 )]
 position = Vector2( 129.229, 1314.44 )
 
-[node name="Barrel" parent="." instance=ExtResource( 5 )]
-position = Vector2( 130.343, 1035.19 )
-
-[node name="Barrel2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 410.728, 990.357 )
-
-[node name="Barrel3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 675.749, 976.287 )
-
 [node name="Buttom" parent="." instance=ExtResource( 9 )]
 position = Vector2( 659.552, 1117.7 )
+
+[node name="Table" type="Sprite" parent="."]
+position = Vector2( 156.233, 1042.69 )
+z_index = 1
+texture = ExtResource( 15 )
+
+[node name="Stairway" type="Sprite" parent="."]
+position = Vector2( 384.702, 381.499 )
+scale = Vector2( 1, 0.732303 )
+z_index = 1
+texture = ExtResource( 5 )
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( 391.325, 675.752 )
 scale = Vector2( 51.0268, 64.0717 )
+z_index = 2
 
 [node name="Flash" parent="." instance=ExtResource( 8 )]
-position = Vector2( 382.717, 691.125 )
+position = Vector2( 355.445, 733.981 )
 scale = Vector2( 1.21608, 1.33872 )
+z_index = 2
 
 [node name="Lives" parent="." instance=ExtResource( 7 )]
 position = Vector2( 648.694, 1313.31 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Cdlvl" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 50.0
 
 [node name="Respawn" type="Position2D" parent="."]
-position = Vector2( 75.3168, 931.697 )
+position = Vector2( 137.272, 668.523 )
 script = ExtResource( 12 )
 ene = ExtResource( 13 )
 
@@ -113,7 +118,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="Respawn2" type="Position2D" parent="."]
-position = Vector2( 217.661, 943.537 )
+position = Vector2( 234.667, 846.883 )
 script = ExtResource( 14 )
 ene2 = ExtResource( 11 )
 
@@ -151,10 +156,9 @@ volume_db = -25.0
 stream = SubResource( 5 )
 volume_db = -20.0
 
-[node name="dim" type="Sprite" parent="."]
-position = Vector2( 601.087, 270.163 )
-z_index = 2
-texture = ExtResource( 15 )
+[node name="Piano" type="Sprite" parent="."]
+position = Vector2( 389.481, 247.178 )
+texture = ExtResource( 16 )
 [connection signal="lifesteel" from="FlashEnemy" to="Lives" method="_on_FlashEnemy_lifesteel"]
 [connection signal="timeout" from="Cdlvl" to="." method="_on_Cdlvl_timeout"]
 [connection signal="timeout" from="Respawn/Timeresp" to="Respawn" method="_on_Timeresp_timeout"]

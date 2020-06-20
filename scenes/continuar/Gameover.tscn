@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/continuar/Gameover.gd" type="Script" id=1]
 [ext_resource path="res://assets/continuar/botoncontinue.png" type="Texture" id=2]
-[ext_resource path="res://assets/continuar/pantallanegra.png" type="Texture" id=3]
+[ext_resource path="res://scenes/continuar/pantallagameover2.png" type="Texture" id=3]
 [ext_resource path="res://assets/continuar/botondcontinue2.png" type="Texture" id=4]
 [ext_resource path="res://assets/continuar/botondquit.png" type="Texture" id=5]
 [ext_resource path="res://assets/continuar/botonquit2.png" type="Texture" id=6]
@@ -23,16 +23,20 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -253.254
-margin_top = -538.66
-margin_right = 246.746
-margin_bottom = 312.34
+margin_left = -174.0
+margin_top = -997.0
+margin_right = 326.0
+margin_bottom = -533.0
+rect_scale = Vector2( 0.7, 0.7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
