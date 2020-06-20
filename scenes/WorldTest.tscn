@@ -107,7 +107,7 @@ wait_time = 50.0
 script = ExtResource( 14 )
 
 [node name="Respawn_2" type="Position2D" parent="."]
-position = Vector2( 475.053, 950.352 )
+position = Vector2( 513.028, 286.742 )
 z_index = 1
 script = ExtResource( 11 )
 ene = ExtResource( 13 )
