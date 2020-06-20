@@ -3,6 +3,8 @@ extends Node2D
 var Enemy = preload("res://scenes/Enemy.tscn/")
 var Enemy_2 = preload ("res://scenes/Enemy_2.tscn/")
 func _ready():
+	Autoload.Lives = 3
+	Autoload.Charge = 6
 	Autoload.Nivel3 = true
 	$CdlvlF.start()
 	add_new_scenes(300,800)

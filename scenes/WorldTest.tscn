@@ -167,8 +167,8 @@ z_index = 1
 texture = ExtResource( 16 )
 [connection signal="lifesteel" from="FlashEnemy" to="Lives" method="_on_FlashEnemy_lifesteel"]
 [connection signal="ready" from="Lives" to="FlashEnemy" method="_on_Lives_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="Respawn_2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="Respawn_3" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Respawn_2/Respawn" to="Respawn_2" method="_on_Respawn_timeout"]
 [connection signal="timeout" from="Respawn_3/Respawn2" to="Respawn_3" method="_on_Respawn2_timeout"]
