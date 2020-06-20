@@ -37,3 +37,8 @@ func _on_Confirm_finished():
 func _on_Confirm2_finished():
 	get_tree().change_scene("res://scenes/level1/Level 1.tscn")
 	pass
+
+
+func _on_Tutorial_pressed():
+	get_tree().change_scene("res://scenes/Tutorial/Tutorial.tscn")
+	pass 
