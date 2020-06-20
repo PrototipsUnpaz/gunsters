@@ -13,12 +13,11 @@
 [ext_resource path="res://scenes/Respawn_2.gd" type="Script" id=11]
 [ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/Enemy_2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/S.png" type="Texture" id=14]
+[ext_resource path="res://scenes/Timer.gd" type="Script" id=14]
 [ext_resource path="res://scenes/sonidos/Music_in_game.ogg" type="AudioStream" id=15]
 [ext_resource path="res://assets/cosa.png" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
-resource_name = "Movspawn"
 length = 4.0
 loop = true
 step = 1.0
@@ -36,7 +35,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-resource_name = "Movspawn"
 length = 3.0
 loop = true
 step = 1.0
@@ -92,18 +90,20 @@ position = Vector2( 658.432, 1108.28 )
 [node name="Flash" parent="." instance=ExtResource( 7 )]
 position = Vector2( 380.954, 710.933 )
 scale = Vector2( 1.09015, 1.33771 )
-z_index = 6
+z_index = 2
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 8 )]
 position = Vector2( 361.266, 688.069 )
 scale = Vector2( 49.3108, 55.509 )
+z_index = 2
 
 [node name="Lives" parent="." instance=ExtResource( 9 )]
 position = Vector2( 653.996, 1319.28 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 50.0
+wait_time = 3.0
+script = ExtResource( 14 )
 
 [node name="Respawn_2" type="Position2D" parent="."]
 position = Vector2( 550.352, 200.727 )
@@ -112,7 +112,7 @@ script = ExtResource( 11 )
 ene = ExtResource( 13 )
 
 [node name="Respawn" type="Timer" parent="Respawn_2"]
-wait_time = 3.0
+wait_time = 4.0
 autostart = true
 
 [node name="Movspawn" type="AnimationPlayer" parent="Respawn_2"]
@@ -120,7 +120,7 @@ autoplay = "Movspawn"
 anims/Movspawn = SubResource( 1 )
 
 [node name="Respawn_3" type="Position2D" parent="."]
-position = Vector2( 165.262, 1021.43 )
+position = Vector2( 312.361, 928.611 )
 z_index = 1
 script = ExtResource( 10 )
 ene2 = ExtResource( 12 )
@@ -132,11 +132,6 @@ autostart = true
 [node name="Movspawn2" type="AnimationPlayer" parent="Respawn_3"]
 autoplay = "Movspawn"
 anims/Movspawn = SubResource( 2 )
-
-[node name="Win" type="Sprite" parent="."]
-visible = false
-position = Vector2( 358.233, 505.049 )
-texture = ExtResource( 14 )
 
 [node name="Mig" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )

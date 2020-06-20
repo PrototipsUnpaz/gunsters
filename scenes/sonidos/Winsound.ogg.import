@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Winsound.ogg-d0aaae7676f56fc0c986eee77c443cae.oggstr"
+
+[deps]
+
+source_file="res://scenes/sonidos/Winsound.ogg"
+dest_files=[ "res://.import/Winsound.ogg-d0aaae7676f56fc0c986eee77c443cae.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

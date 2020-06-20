@@ -1,14 +1,15 @@
 ﻿# Proyecto [Gunsters]
 # Unpaz 2020
 # Intregantes del equipo:
- Leonardo Maidana.
- Miguel Costilla.
+ Costilla Enzo.
+ Costilla Miguel.
 ## Descripción
-[REEMPLAZAR CON DESCRIPCIÓN DEL PROYECTO]
+El juego fue desarrollado en el lapso de tres meses a lo largo de seis sprints , su salida al mercado debe ser a finales de junio bajo la desarrolladora Prototips. Este debe ser para androids con una temática de FPS, con estilo western, con el comienzo de un nivel y a expandirse a futuro.
+
 
 ## Instrucciones de ejecución
 
-Para ejecutar el juego es necesario tener instalado el motor La rama `Godot Engine V 3.2.1`
+Para ejecutar el juego es necesario tener android en tus dispositivo celular.
 
 ## Flujo de trabajo
 

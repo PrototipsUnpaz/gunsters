@@ -6,6 +6,7 @@ var Charge = CountCharge
 const CountLives = 3
 var Lives = CountLives
 
-	
+var Nivel2 = false
+var Nivel3 = false 
 
 

@@ -11,8 +11,13 @@ func _on_quit_pressed():
 func _on_continue_pressed():
 	get_tree().get_nodes_in_group("sf")[0].get_node("Confirm4").play()
 	pass # Replace with function body.
-
-
+func _lvl2():
+	get_tree().change_scene("res://scenes/Nivel2/Nivel2.tscn")
+	pass
+func lvl1():
+	get_tree().change_scene("res://scenes/WorldTest.tscn")
+	pass
+	
 func _on_Confirm3_finished():
 	Autoload.Lives = 3
 	Autoload.Charge = 6
@@ -23,5 +28,8 @@ func _on_Confirm3_finished():
 func _on_Confirm4_finished():
 	Autoload.Lives = 3
 	Autoload.Charge = 6
-	get_tree().change_scene("res://scenes/WorldTest.tscn")
+	if Autoload.Nivel2 == false:
+		lvl1()
+	else:
+		_lvl2()
 	pass 
