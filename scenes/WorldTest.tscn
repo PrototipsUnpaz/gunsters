@@ -18,7 +18,7 @@
 [ext_resource path="res://assets/cosa.png" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
-length = 4.0
+length = 3.0
 loop = true
 step = 1.0
 tracks/0/type = "value"
@@ -28,10 +28,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 206.159, 957.685 ), Vector2( 645.554, 945.702 ), Vector2( 211.485, 981.652 ), Vector2( 550.352, 200.727 ), Vector2( 421.862, 869.806 ) ]
+"values": [ Vector2( 206.159, 957.685 ), Vector2( 645.554, 945.702 ), Vector2( 211.485, 981.652 ), Vector2( 550.352, 200.727 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -73,19 +73,20 @@ position = Vector2( 384.884, 1277.22 )
 z_index = 2
 
 [node name="Barrel" parent="." instance=ExtResource( 4 )]
-position = Vector2( 179.008, 1085.53 )
+position = Vector2( 210.008, 1085.53 )
 
 [node name="Barrel2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 247.948, 1086.43 )
+position = Vector2( 671.948, 1041.43 )
 
 [node name="Barrel3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 213.548, 1086 )
+position = Vector2( 276.548, 1086 )
 
 [node name="Bullets" parent="." instance=ExtResource( 5 )]
 position = Vector2( 132.174, 1315.38 )
 
 [node name="Buttom" parent="." instance=ExtResource( 6 )]
 position = Vector2( 658.432, 1108.28 )
+z_index = 2
 
 [node name="Flash" parent="." instance=ExtResource( 7 )]
 position = Vector2( 380.954, 710.933 )
@@ -93,7 +94,7 @@ scale = Vector2( 1.09015, 1.33771 )
 z_index = 2
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 361.266, 688.069 )
+position = Vector2( 367.139, 685.133 )
 scale = Vector2( 49.3108, 55.509 )
 z_index = 2
 
@@ -106,7 +107,7 @@ wait_time = 50.0
 script = ExtResource( 14 )
 
 [node name="Respawn_2" type="Position2D" parent="."]
-position = Vector2( 550.352, 200.727 )
+position = Vector2( 475.053, 950.352 )
 z_index = 1
 script = ExtResource( 11 )
 ene = ExtResource( 13 )
@@ -120,7 +121,7 @@ autoplay = "Movspawn"
 anims/Movspawn = SubResource( 1 )
 
 [node name="Respawn_3" type="Position2D" parent="."]
-position = Vector2( 312.361, 928.611 )
+position = Vector2( 493.717, 744.864 )
 z_index = 1
 script = ExtResource( 10 )
 ene2 = ExtResource( 12 )
@@ -166,8 +167,8 @@ z_index = 1
 texture = ExtResource( 16 )
 [connection signal="lifesteel" from="FlashEnemy" to="Lives" method="_on_FlashEnemy_lifesteel"]
 [connection signal="ready" from="Lives" to="FlashEnemy" method="_on_Lives_ready"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="Respawn_2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="Respawn_3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Respawn_2/Respawn" to="Respawn_2" method="_on_Respawn_timeout"]
 [connection signal="timeout" from="Respawn_3/Respawn2" to="Respawn_3" method="_on_Respawn2_timeout"]
