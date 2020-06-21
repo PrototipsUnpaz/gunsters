@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Fondo.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://scenes/Timer.gd" type="Script" id=14]
 [ext_resource path="res://scenes/sonidos/Music_in_game.ogg" type="AudioStream" id=15]
 [ext_resource path="res://assets/cosa.png" type="Texture" id=16]
+[ext_resource path="res://scenes/bolsaarena.png" type="Texture" id=17]
 
 [sub_resource type="Animation" id=1]
 length = 3.0
@@ -165,6 +166,11 @@ volume_db = -20.0
 position = Vector2( 599.176, 275.621 )
 z_index = 1
 texture = ExtResource( 16 )
+
+[node name="Sand" type="Sprite" parent="."]
+position = Vector2( 318.997, 337.522 )
+z_index = 1
+texture = ExtResource( 17 )
 [connection signal="lifesteel" from="FlashEnemy" to="Lives" method="_on_FlashEnemy_lifesteel"]
 [connection signal="ready" from="Lives" to="FlashEnemy" method="_on_Lives_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
