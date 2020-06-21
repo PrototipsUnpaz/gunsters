@@ -3,6 +3,8 @@ var Velocity = Vector2 (0,0)
 var posPistol = 0
 var Scope = preload ("res://assets/Scope.tscn")
 
+var can_shoot = true
+
 func _ready():
 	
 	pass
@@ -22,61 +24,48 @@ func _shooting():
 		Get_Direction()
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:	
 		if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
-			posPistol = 1
-			Autoload.Charge -= 1
-			get_tree().call_group("Flash", "mostrar_flash")
-			
+			shoot(1, true)
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
 		if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
-			$Pistolani.flip_h = false
-			posPistol = 1
-			Autoload.Charge -= 1
-		get_tree().call_group("Flash", "mostrar_flash")
+			shoot(1, false)
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
 		if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
-			$Pistolani.flip_h = false
-			posPistol = 3
-			Autoload.Charge -= 1
-			get_tree().call_group("Flash", "mostrar_flash")
-			
+			shoot(3, false)
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
 		if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
-			$Pistolani.flip_h = true
-			posPistol = 3
-			Autoload.Charge -= 1
-			get_tree().call_group("Flash", "mostrar_flash")
+			shoot(3, true)
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
 		if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
-			posPistol = 5
-			Autoload.Charge -= 1
-			get_tree().call_group("Flash", "mostrar_flash")
-			pass
+			shoot(5, false)
+
 func Get_Direction():
 	if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
-		$Pistolani.flip_h = true
-		posPistol = 0
+		shoot(0, true, false)
 	if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
-		$Pistolani.flip_h = false
-		posPistol = 0
+		shoot(0, false, false)
 	if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
-		$Pistolani.flip_h = false
-		posPistol = 2
+		shoot(2, false, false)
 	if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
-		$Pistolani.flip_h = true
-		posPistol = 2
+		shoot(2, true, false)
 	if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
-		posPistol = 4
+		shoot(4, false, false)
 	
 	pass
 
 
 
 
+func shoot(pos, flip, is_shoot = true):
+	$Pistolani.flip_h = flip
+	posPistol = pos
+	if is_shoot and can_shoot:
+		can_shoot = false
+		$CoolDown.start()
+		Autoload.Charge -= 1
+		get_tree().call_group("Flash", "mostrar_flash")
 
 
 
-
-
-
-
-
+func _on_CoolDown_timeout():
+	can_shoot = true
+	pass
