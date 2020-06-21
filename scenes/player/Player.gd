@@ -16,54 +16,59 @@ func _process(delta):
 	
 func _shooting():
 	$Pistolani.frame = posPistol
-	
-	if Autoload.canShoot == false:  
-		return  
-	
-	if Input.is_action_just_released("Touch") and Autoload.Charge >= 1:
+	if Input.is_action_just_released("Touch") and Autoload.Charge >= 1 :
 		Get_Direction()
-	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1 and Autoload.canShoot == true :
 		if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
-			shoot(0, true)
+			shoot(1, true)
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1 and Autoload.canShoot == true:
 		if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
-			shoot(0, false)
+			shoot(1, false)
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1 and Autoload.canShoot == true:
 		if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
-			shoot(2, false)
+			shoot(3, false)
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1 and Autoload.canShoot == true :
 		if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
-			shoot(2, true)
+			shoot(3, true)
+	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1 and Autoload.canShoot == true:
 		if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
-			shoot(4, false)
+			shoot(5, false)
 			
+
 func Get_Direction():
 	if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
-		direction(1, true)
+		shoot(0, true, false)
 	if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
-		direction(1, false)
+		shoot(0, false, false)
 	if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
-		direction(3, false)
+		shoot(2, false, false)
 	if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
-		direction(3, true)
+		shoot(2, true, false)
 	if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
-		direction(5, false)
+		shoot(4, false, false)
+	
+	pass
 	pass
 
-
-func shoot(pos, flip):
-	Autoload.canShoot = false  
-	$Cd.start()  
+func shoot(pos, flip, is_shoot = true):
 	$Pistolani.flip_h = flip
 	posPistol = pos
-	Autoload.Charge -= 1
-	get_tree().call_group("Flash", "mostrar_flash")
-
-
-func direction(pos, flip):
-	$Pistolani.flip_h = true
-	posPistol 
+	if is_shoot and Autoload.canShoot:
+		Autoload.canShoot = false
+		$Cd.start()
+		Autoload.Charge -= 1
+		get_tree().call_group("Flash", "mostrar_flash")
 	
 func _on_Cd_timeout():
 	Autoload.canShoot = true
 	pass 
 	
+
+	
+
+
+
+
+
 
 
