@@ -24,27 +24,27 @@ func _shooting():
 		Get_Direction()
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1:
 		if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
-			shoot(1, true)
+			shoot(0, true)
 		if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
-			shoot(1, false)
+			shoot(0, false)
 		if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
-			shoot(3, false)
+			shoot(2, false)
 		if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
-			shoot(3, true)
+			shoot(2, true)
 		if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
-			shoot(5, false)
+			shoot(4, false)
 			
 func Get_Direction():
 	if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
-		direction(0, true)
+		direction(1, true)
 	if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
-		direction(0, false)
+		direction(1, false)
 	if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
-		direction(2, false)
+		direction(3, false)
 	if get_global_mouse_position().x > 466 and get_global_mouse_position().y > 500:
-		direction(2, true)
+		direction(3, true)
 	if get_global_mouse_position().x > 234 and get_global_mouse_position().x < 465:
-		direction(4, false)
+		direction(5, false)
 	pass
 
 
