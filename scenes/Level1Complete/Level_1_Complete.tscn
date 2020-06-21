@@ -1,21 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Level1Complete/Level_1_Complete.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Level1Complete/compete1.png" type="Texture" id=2]
 
 [node name="Level_1_Complete" type="Node2D"]
 position = Vector2( 284.361, 683.084 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = -29.6724
-margin_top = 8.03627
-margin_right = 81.3276
-margin_bottom = 22.0363
-text = "Level 1 complete"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Lvl1complete" type="Sprite" parent="."]
+position = Vector2( 22.2594, 0.661632 )
+scale = Vector2( 0.208139, 0.206292 )
+texture = ExtResource( 2 )
 
 [node name="Cd" type="Timer" parent="."]
 wait_time = 2.0

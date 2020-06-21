@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Nivel2/Nivel2.gd" type="Script" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://scenes/Nivel2/Respawn2.gd" type="Script" id=14]
 [ext_resource path="res://scenes/Nivel2/Table.png" type="Texture" id=15]
 [ext_resource path="res://scenes/Nivel2/pianolag.png" type="Texture" id=16]
+[ext_resource path="res://scenes/Nivel2/silla2.png" type="Texture" id=17]
+[ext_resource path="res://scenes/Nivel2/silla1.png" type="Texture" id=18]
+[ext_resource path="res://scenes/Nivel2/sillapiano.png" type="Texture" id=19]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Respawn"
@@ -75,6 +78,7 @@ position = Vector2( 129.229, 1314.44 )
 
 [node name="Buttom" parent="." instance=ExtResource( 9 )]
 position = Vector2( 659.552, 1117.7 )
+z_index = 1
 
 [node name="Table" type="Sprite" parent="."]
 position = Vector2( 156.233, 1042.69 )
@@ -159,6 +163,19 @@ volume_db = -20.0
 [node name="Piano" type="Sprite" parent="."]
 position = Vector2( 389.481, 247.178 )
 texture = ExtResource( 16 )
+
+[node name="ban1" type="Sprite" parent="."]
+position = Vector2( 328.609, 982.573 )
+texture = ExtResource( 18 )
+
+[node name="ban2" type="Sprite" parent="."]
+position = Vector2( 104.114, 950.037 )
+texture = ExtResource( 17 )
+
+[node name="Pianosit" type="Sprite" parent="."]
+position = Vector2( 314.293, 393.68 )
+scale = Vector2( 0.599563, 0.599563 )
+texture = ExtResource( 19 )
 [connection signal="lifesteel" from="FlashEnemy" to="Lives" method="_on_FlashEnemy_lifesteel"]
 [connection signal="timeout" from="Cdlvl" to="." method="_on_Cdlvl_timeout"]
 [connection signal="timeout" from="Respawn/Timeresp" to="Respawn" method="_on_Timeresp_timeout"]
