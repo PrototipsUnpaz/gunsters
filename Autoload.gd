@@ -9,4 +9,4 @@ var Nivel1 = false
 var Nivel2 = false
 var Nivel3 = false 
 
-
+var canShoot = true
