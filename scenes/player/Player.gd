@@ -36,7 +36,7 @@ func _shooting():
 			
 func Get_Direction():
 	if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:
-		direction(1, true)
+		direction(0, true)
 	if get_global_mouse_position().x < 233 and get_global_mouse_position().y < 500:
 		direction(0, false)
 	if get_global_mouse_position().x < 233 and get_global_mouse_position().y > 500:
@@ -59,8 +59,11 @@ func shoot(pos, flip):
 
 func direction(pos, flip):
 	$Pistolani.flip_h = true
-	posPistol
+	posPistol 
 	
 func _on_Cd_timeout():
 	Autoload.canShoot = true
 	pass 
+	
+
+
