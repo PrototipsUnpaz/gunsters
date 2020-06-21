@@ -24,12 +24,14 @@ func lvl1():
 	pass
 	
 func _on_Confirm3_finished():
+	Autoload.canShoot = true
 	Autoload.prueba = false
 	get_tree().change_scene("res://scenes/menu/botones.tscn")
 	pass 
 
 
 func _on_Confirm4_finished():
+	Autoload.canShoot = true
 	Autoload.prueba = false
 	if Autoload.Nivel1 == true:
 		lvl1()

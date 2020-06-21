@@ -3,6 +3,8 @@ extends Node2D
 var Enemy = preload("res://scenes/Enemy.tscn/")
 var Enemy_2 = preload ("res://scenes/Enemy_2.tscn/")
 func _ready():
+	Autoload.canShoot = true
+	Autoload.prueba = false
 	Autoload.Lives = 3
 	Autoload.Charge = 6
 	Autoload.Nivel3 = true
@@ -38,4 +40,4 @@ func remove_objects(mainnode,objectpath):
 
 func _on_CdlvlF_timeout():
 	get_tree().change_scene("res://scenes/Succesfull.tscn")
-	pass # Replace with function body.
+	pass
