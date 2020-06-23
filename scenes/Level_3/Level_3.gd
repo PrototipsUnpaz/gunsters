@@ -35,9 +35,6 @@ func remove_objects(mainnode,objectpath):
 	mainnode.get_node(objectpath).queue_free()
 	
 
-
-
-
 func _on_CdlvlF_timeout():
 	get_tree().change_scene("res://scenes/Succesfull.tscn")
 	pass

@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-func _ready():
-	pass
 func _process(delta):
 	if Autoload.prueba == false and Autoload.Charge >= 6:
 		$Bullets.frame = 6 
