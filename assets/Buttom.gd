@@ -1,6 +1,5 @@
 extends Sprite
-func _ready():
-	pass
+
 func _process(delta):
 	print (Autoload.prueba)
 	pass

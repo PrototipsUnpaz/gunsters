@@ -1,8 +1,5 @@
 extends Position2D
 export (PackedScene) var ene
-func _ready():
-	pass
-
 
 func _on_TimeRes_timeout():
 	var NewEnemy = ene.instance()

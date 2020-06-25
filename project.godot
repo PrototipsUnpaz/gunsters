@@ -15,8 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="clase_2_senales"
+config/name="Gunsters"
 run/main_scene="res://scenes/menu/botones.tscn"
+config/icon="res://assets/icono/icono3.png"
 
 [autoload]
 

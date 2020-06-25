@@ -21,7 +21,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 37.6338
+radius = 45.9655
 height = 30.4985
 
 [node name="Enemy_2" type="Area2D"]

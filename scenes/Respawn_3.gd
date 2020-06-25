@@ -1,9 +1,6 @@
 extends Position2D
 
 export (PackedScene) var ene2
-func _ready():
-	pass
-
 
 
 func _on_Respawn2_timeout():

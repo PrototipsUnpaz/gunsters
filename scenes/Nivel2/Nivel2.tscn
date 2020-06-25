@@ -69,6 +69,7 @@ data = PoolByteArray( 79, 103, 103, 83, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 139, 57, 6
 script = ExtResource( 2 )
 
 [node name="BG2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -3.63721, -6.34677 )
 
 [node name="Pistol" parent="." instance=ExtResource( 1 )]
 position = Vector2( 378.687, 1278.85 )
@@ -92,12 +93,12 @@ z_index = 1
 texture = ExtResource( 5 )
 
 [node name="FlashEnemy" parent="." instance=ExtResource( 6 )]
-position = Vector2( 391.325, 675.752 )
+position = Vector2( 360.749, 684.436 )
 scale = Vector2( 51.0268, 64.0717 )
 z_index = 2
 
 [node name="Flash" parent="." instance=ExtResource( 8 )]
-position = Vector2( 355.445, 733.981 )
+position = Vector2( 391.939, 722.874 )
 scale = Vector2( 1.21608, 1.33872 )
 z_index = 2
 

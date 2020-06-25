@@ -4,9 +4,8 @@
 [ext_resource path="res://scenes/Area2D.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Enemy.gd" type="Script" id=3]
 
-
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.0302, 79.7158 )
+extents = Vector2( 37.7403, 93.2265 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Disparo"
