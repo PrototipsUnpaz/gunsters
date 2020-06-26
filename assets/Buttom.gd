@@ -1,8 +1,5 @@
 extends Sprite
 
-func _process(delta):
-	print (Autoload.prueba)
-	pass
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("Touch"):
 		get_tree().get_nodes_in_group("sfx")[0].get_node("recarga").play()

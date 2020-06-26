@@ -11,12 +11,13 @@ func _process(delta):
 		Sc.global_position = get_global_mouse_position()
 	if Autoload.prueba == false:
 		_shooting()
+		print(Autoload.canShoot)
 			
 	pass
 	
 func _shooting():
 	$Pistolani.frame = posPistol
-	if Input.is_action_just_released("Touch") and Autoload.Charge >= 1  :
+	if Input.is_action_just_released("Touch") and Autoload.Charge >= 1 :
 		Get_Direction()
 	if Input.is_action_just_pressed("Touch") and Autoload.Charge >= 1 and Autoload.canShoot == true :
 		if get_global_mouse_position().x > 466 and get_global_mouse_position().y < 500:

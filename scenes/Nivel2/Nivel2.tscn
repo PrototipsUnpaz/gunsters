@@ -103,8 +103,8 @@ scale = Vector2( 1.21608, 1.33872 )
 z_index = 2
 
 [node name="Lives" parent="." instance=ExtResource( 7 )]
-position = Vector2( 648.694, 1313.31 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 643.694, 1315.31 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="Cdlvl" type="Timer" parent="."]
 wait_time = 50.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Onelife.png-62143fd5850a74d9e6261444f4e65f69.stex"
+path="res://.import/vidas2.png-d1b6b2d4daa0ab16cd5d32178c08809d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Onelife.png"
-dest_files=[ "res://.import/Onelife.png-62143fd5850a74d9e6261444f4e65f69.stex" ]
+source_file="res://assets/vidas2.png"
+dest_files=[ "res://.import/vidas2.png-d1b6b2d4daa0ab16cd5d32178c08809d.stex" ]
 
 [params]
 
